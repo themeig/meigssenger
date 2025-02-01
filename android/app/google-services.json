@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861179421567",
+    "project_id": "miegssanger",
+    "storage_bucket": "miegssanger.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861179421567:android:419e9ded8b14cf9d5bf04a",
+        "android_client_info": {
+          "package_name": "com.meig.meigssanger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS3j7KG_G_YX2cGW6iqGNl3YnKLT1tkew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
