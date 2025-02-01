@@ -1,0 +1,22 @@
+workflows:
+  ios-test-workflow:
+    name: iOS Test Workflow
+    environment:
+      vars:
+        XCODE_WORKSPACE: "ios/Runner.xcworkspace"
+        XCODE_SCHEME: "Runner"
+        BUNDLE_ID: "com.meig.meigssanger" # Sostituisci con il tuo bundle ID
+      xcode: latest
+    scripts:
+      - name: Install Flutter dependencies
+        script: flutter pub get
+      - name: Build iOS
+        script: |
+          flutter build ios --release --no-codesign
+          xcodebuild -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" -sdk iphoneos -configuration Release CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      email:
+        recipients:
+          - riccardoma07@gmail.com # Email per ricevere il link di download
